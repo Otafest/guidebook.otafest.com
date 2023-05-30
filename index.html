@@ -15,6 +15,9 @@
 	<div id="links"></div>
 	<script>
 		let guidebooks = [
+			{name:"Otafest 2000", file: "2000-Guidebook.pdf"},
+			{name:"Otafest 2000 - Special", file: "2000-Guidebook-Sp.pdf"},
+			{name:"Otafest 2002", file: "2002-Guidebook.pdf"},
 			{name:"Otafest 2006", file: "2006-Guidebook.pdf"},
 			{name:"Otafest 2008", file: "2008-Guidebook.pdf"},
 			{name:"Otafest 2009", file: "2009-Guidebook.pdf"},
@@ -41,7 +44,7 @@
 		guidebooks.forEach(guidebook => {
 			let li = document.createElement('li');
 			let a = document.createElement('a');
-			a.href=`pdf/${guidebook.file}`;
+			a.href=`https://s3.ca-central-1.amazonaws.com/guidebook.otafest.com/pdf/${guidebook.file}`;
 			
 			let linkText = document.createTextNode(guidebook.name);
       		a.appendChild(linkText);
