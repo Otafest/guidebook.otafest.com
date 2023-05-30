@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Otafest Guidebook Archive</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+	<h2>Otafest Guidebook Archive</h2>
+	<div id="links"></div>
+	<script>
+		let guidebooks = [
+			{name:"Otafest 2006", file: "2006-Guidebook.pdf"},
+			{name:"Otafest 2010", file: "2010-Guidebook.pdf"},
+			{name:"Otafest 2011", file: "2011-Guidebook.pdf"},
+			{name:"Otafest 2012", file: "2012-Guidebook.pdf"},
+			{name:"Otafest 2013", file: "2013-Guidebook.pdf"},
+			{name:"Otafest 2014", file: "2014-Guidebook.pdf"},
+			{name:"Otafest Aurora 2014", file: "2014-Aurora-Guidebook.pdf"},
+			{name:"Otafest 2015", file: "2015-Guidebook.pdf"},
+			{name:"Otafest Aurora 2015", file: "2015-Aurora-Guidebook.pdf"},
+			{name:"Otafest 2016", file: "2016-Guidebook.pdf"},
+			{name:"Otafest Aurora 2016", file: "2016-Aurora-Guidebook.pdf"},
+			{name:"Otafest 2017", file: "2017-Guidebook.pdf"},
+			{name:"Otafest 2018", file: "2018-Guidebook.pdf"},
+			{name:"Otafest 2019", file: "2019-Guidebook.pdf"},
+			{name:"Otafest 2022", file: "2022-Guidebook.pdf"},
+			{name:"Otafest 2023", file: "2023-Guidebook.pdf"},
+		];
+
+		const div = document.getElementById("links");
+		const list = document.createElement("ul");
+
+		guidebooks.forEach(guidebook => {
+			let li = document.createElement('li');
+			let a = document.createElement('a');
+			a.href=`pdf/${guidebook.file}`;
+			
+			let linkText = document.createTextNode(guidebook.name);
+      		a.appendChild(linkText);
+
+			li.append(a);
+			list.append(li);
+		});
+		div.append(list);
+	</script>
+</body>
